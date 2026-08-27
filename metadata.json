@@ -1,0 +1,6 @@
+{
+  "name": "School Website",
+  "description": "Modern, responsive, and feature-rich official school website with gallery, notices, staff directory, and online admissions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
