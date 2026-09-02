@@ -101,6 +101,39 @@
   }
 }
 
+@keyframes noticeTicker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.notice-ticker {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+}
+
+.notice-ticker:hover .notice-ticker-track {
+  animation-play-state: paused;
+}
+
+.notice-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: noticeTicker 30s linear infinite;
+}
+
+.notice-ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: min(28rem, 70vw);
+  flex-shrink: 0;
+  padding-right: 3rem;
+}
+
 .animate-fade-in {
   animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { schoolConfig } from "@/lib/school-config";
+import { schoolNotices } from "@/components/notices";
 import { QRCodeSVG } from "qrcode.react";
 import {
   Menu,
@@ -85,6 +86,8 @@ export const Header: React.FC<HeaderProps> = ({
     { label: "Contact", href: "/contact" },
   ];
 
+  const recentNotices = schoolNotices.slice(0, 3);
+
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
@@ -123,12 +126,24 @@ export const Header: React.FC<HeaderProps> = ({
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               <span className="inline-flex items-center gap-1 font-semibold text-emerald-300 uppercase tracking-wider text-[11px] bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30 flex-shrink-0">
-                <BellRing className="w-3 h-3" /> Admissions Open
+                <BellRing className="w-3 h-3" /> Latest Notices
               </span>
-              <p className="truncate text-slate-200">
-                Admissions open for Academic Session 2084 for Nursery to
-                Grade 8 (Science & Management).
-              </p>
+              <div className="notice-ticker min-w-0 flex-1" aria-label="Latest school notices">
+                <div className="notice-ticker-track">
+                  {[...recentNotices, ...recentNotices].map((notice, index) => (
+                    <a
+                      key={`${notice.id}-${index}`}
+                      href="/notices"
+                      onClick={(e) => handleNavClick(e, "/notices")}
+                      className="notice-ticker-item text-slate-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+                    >
+                      <span className="text-emerald-300 font-semibold">{notice.category}</span>
+                      <span aria-hidden="true">&middot;</span>
+                      <span className="truncate">{notice.title}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
             <div className="flex items-center gap-3 flex-shrink-0">
               <a
