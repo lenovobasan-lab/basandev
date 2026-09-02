@@ -1,3 +1,5 @@
+import { assetPath } from "./asset-path";
+
 export interface SchoolConfig {
   name: string;
   iemisCode: string;
@@ -25,7 +27,7 @@ export const schoolConfig: SchoolConfig = {
   tagline: "Learn • Lead • Succeed",
   motto: "Quality Education • Character Development • Community Service",
   logo: "https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?w=256&auto=format&fit=crop&q=80",
-  coverImage: "/photos/hero/cover.png",
+  coverImage: assetPath("/photos/hero/cover.png"),
   location: "Suryodaya Municipality-9, Ramfok, Ilam, Koshi Province, Nepal",
   phone: "+977-61-532104",
   email: "info@shreerastriyabasicschool.edu.np",

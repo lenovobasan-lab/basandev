@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Videos } from "@/components/videos";
+import { assetPath } from "@/lib/asset-path";
 import {
   Images,
   ChevronLeft,
@@ -31,10 +32,10 @@ export const galleryEvents: GalleryEvent[] = [
     description:
       "Thrilling 100m sprints, high-jump relays, football finals, and martial arts demonstrations.",
     photos: [
-      "/photos/events/sports-day.JPEG",
-      "/photos/events/sports-day-2.JPEG",
-      "/photos/events/sports-day-3.JPEG",
-      "/photos/events/sports-day-4.JPEG",
+      assetPath("/photos/events/sports-day.JPEG"),
+      assetPath("/photos/events/sports-day-2.JPEG"),
+      assetPath("/photos/events/sports-day-3.JPEG"),
+      assetPath("/photos/events/sports-day-4.JPEG"),
     ],
   },
   {
@@ -45,10 +46,10 @@ export const galleryEvents: GalleryEvent[] = [
     description:
       "Students presenting solar tracking arrays, drone delivery prototypes, and AI-assisted agricultural sensors.",
     photos: [
-      "/photos/events/science-fair-2.JPG",
-      "/photos/events/science-exhibition.jpg",
-      "/photos/events/science-fair-3.jpg",
-      "/photos/events/science-fair-4.jpg",
+      assetPath("/photos/events/science-fair-2.JPG"),
+      assetPath("/photos/events/science-exhibition.jpg"),
+      assetPath("/photos/events/science-fair-3.jpg"),
+      assetPath("/photos/events/science-fair-4.jpg"),
     ],
   },
   {
@@ -59,12 +60,12 @@ export const galleryEvents: GalleryEvent[] = [
     description:
       "Vibrant traditional folk costumes, Deuda circles, classical violin orchestras, and theatrical dramas.",
     photos: [
-      "/photos/events/cultural-program.JPG",
-      "/photos/events/cultural-program-2.JPG",
-      "/photos/events/cultural-program-3.JPG",
-      "/photos/events/cultural-program-4.JPG",
-      "/photos/events/cultural-program-5.JPG",
-      "/photos/events/cultural-program-6.JPG",
+      assetPath("/photos/events/cultural-program.JPG"),
+      assetPath("/photos/events/cultural-program-2.JPG"),
+      assetPath("/photos/events/cultural-program-3.JPG"),
+      assetPath("/photos/events/cultural-program-4.JPG"),
+      assetPath("/photos/events/cultural-program-5.JPG"),
+      assetPath("/photos/events/cultural-program-6.JPG"),
 
     ],
   },
