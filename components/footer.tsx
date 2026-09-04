@@ -22,6 +22,12 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const currentYear = new Date().getFullYear();
+  const importantLinks = [
+    { label: "Hamro Patro", href: "https://www.hamropatro.com/" },
+    { label: "National Examination Board", href: "https://neb.gov.np/" },
+    { label: "Ministry of Education", href: "https://moest.gov.np/" },
+    { label: "CDC Nepal", href: "https://moecdc.gov.np/" },
+  ];
 
   const handleLinkClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -107,11 +113,29 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <a
+                  href="/"
+                  onClick={(e) => handleLinkClick(e, "/")}
+                  className="hover:text-blue-400 transition-colors inline-flex items-center gap-1.5"
+                >
+                  <ChevronRight className="w-3.5 h-3.5 text-accent" /> Home
+                </a>
+              </li>
+              <li>
+                <a
                   href="/about"
                   onClick={(e) => handleLinkClick(e, "/about")}
                   className="hover:text-blue-400 transition-colors inline-flex items-center gap-1.5"
                 >
                   <ChevronRight className="w-3.5 h-3.5 text-accent" /> About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#principal"
+                  onClick={(e) => handleLinkClick(e, "/#principal")}
+                  className="hover:text-blue-400 transition-colors inline-flex items-center gap-1.5"
+                >
+                  <ChevronRight className="w-3.5 h-3.5 text-accent" /> Principal's Message
                 </a>
               </li>
               <li>
@@ -162,6 +186,28 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </a>
               </li>
             </ul>
+
+            <div className="pt-3 border-t border-white/10">
+              <h5 className="font-bold text-[11px] text-slate-300 uppercase tracking-wider mb-2">
+                Important Links
+              </h5>
+              <ul className="space-y-2 text-xs sm:text-sm">
+                {importantLinks.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-400 transition-colors inline-flex items-center gap-1.5"
+                    >
+                      <ChevronRight className="w-3.5 h-3.5 text-accent" />
+                      <span>{link.label}</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Column 3: Address & Contact (4 cols) */}

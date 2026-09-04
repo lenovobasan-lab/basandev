@@ -6,7 +6,6 @@ import {
   ChevronDown,
   Sparkles,
   ArrowRight,
-  ShieldCheck,
   BookOpen,
   Award,
   Users,
