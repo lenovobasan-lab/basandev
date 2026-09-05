@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { schoolConfig } from "@/lib/school-config";
+import { assetPath } from "@/lib/asset-path";
 import {
   Users,
   Phone,
@@ -33,8 +34,7 @@ export const staffDirectory: StaffMember[] = [
     qualification: "Ph.D. in Educational Leadership, M.Ed.",
     contact: "+977-61-532104",
     email: "principal@mounteverest.edu.np",
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=85",
+    image: assetPath("/photos/staff/principal.jpg"),
     experience: "24 Years Experience",
   },
   {
@@ -45,8 +45,7 @@ export const staffDirectory: StaffMember[] = [
     qualification: "M.Sc. Physics (Tribhuvan University)",
     contact: "+977-9856012301",
     email: "sita.gurung@mounteverest.edu.np",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=85",
+    image: assetPath("/photos/staff/vice-principal.jpg"),
     experience: "18 Years Experience",
   },
   {
@@ -57,8 +56,7 @@ export const staffDirectory: StaffMember[] = [
     qualification: "M.Tech in Electronics & Robotics",
     contact: "+977-9856012302",
     email: "bikram.thapa@mounteverest.edu.np",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=85",
+    image: assetPath("/photos/staff/science-teacher.PNG"),
     experience: "12 Years Experience",
   },
   {
@@ -69,8 +67,7 @@ export const staffDirectory: StaffMember[] = [
     qualification: "M.A. English (Gold Medalist, TU)",
     contact: "+977-9856012303",
     email: "pooja.regmi@mounteverest.edu.np",
-    image:
-      "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=600&auto=format&fit=crop&q=85",
+    image: assetPath("/photos/staff/english-teacher.JPG"),
     experience: "14 Years Experience",
   },
   {
@@ -81,8 +78,7 @@ export const staffDirectory: StaffMember[] = [
     qualification: "M.Sc. Applied Mathematics",
     contact: "+977-9856012304",
     email: "manoj.shrestha@mounteverest.edu.np",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&auto=format&fit=crop&q=85",
+    image: assetPath("/photos/staff/maths-teacher.jpeg"),
     experience: "16 Years Experience",
   },
   {
@@ -93,8 +89,7 @@ export const staffDirectory: StaffMember[] = [
     qualification: "Ph.D. in Organic Chemistry",
     contact: "+977-9856012305",
     email: "anupama.karki@mounteverest.edu.np",
-    image:
-      "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&auto=format&fit=crop&q=85",
+    image: assetPath("/photos/staff/social-teacher.jpg"),
     experience: "11 Years Experience",
   },
   {
@@ -105,8 +100,7 @@ export const staffDirectory: StaffMember[] = [
     qualification: "M.A. Nepali Literature & Linguistics",
     contact: "+977-9856012306",
     email: "ramesh.acharya@mounteverest.edu.np",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&auto=format&fit=crop&q=85",
+    image: assetPath("/photos/staff/nepali-teacher.jpg"),
     experience: "19 Years Experience",
   },
   {
@@ -117,8 +111,7 @@ export const staffDirectory: StaffMember[] = [
     qualification: "B.P.Ed., Certified AFC Football Coach",
     contact: "+977-9856012307",
     email: "sunil.sports@mounteverest.edu.np",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=85",
+    image: assetPath("/photos/staff/dance-teacher.JPG"),
     experience: "10 Years Experience",
   },
   {
@@ -129,8 +122,7 @@ export const staffDirectory: StaffMember[] = [
     qualification: "M.A. Child Psychology & Montessori Diploma",
     contact: "+977-9856012308",
     email: "kopila.primary@mounteverest.edu.np",
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop&q=85",
+    image: assetPath("/photos/staff/ecd-teacher.JPG"),
     experience: "15 Years Experience",
   },
 ];

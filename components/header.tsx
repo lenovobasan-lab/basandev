@@ -13,6 +13,7 @@ import {
   ExternalLink,
   GraduationCap,
   BellRing,
+  CalendarDays,
   Phone,
   Mail,
   ChevronRight,
@@ -30,6 +31,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showQrTooltip, setShowQrTooltip] = useState(false);
+  const [showCalendar, setShowCalendar] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [bannerDismissed, setBannerDismissed] = useState(false);
@@ -84,7 +86,13 @@ export const Header: React.FC<HeaderProps> = ({
     { label: "Gallery", href: "/gallery" },
     { label: "Notices", href: "/notices" },
     { label: "Contact", href: "/contact" },
+    { label: "Calendar", href: "#calendar" },
   ];
+  const calendarUrl = "https://www.hamropatro.com/widgets/calender-full.php";
+
+  const openCalendar = () => {
+    window.open(calendarUrl, "_blank", "noopener,noreferrer");
+  };
 
   const recentNotices = schoolNotices.slice(0, 3);
 
@@ -211,6 +219,51 @@ export const Header: React.FC<HeaderProps> = ({
               const isActive =
                 currentPath === link.href ||
                 (link.href !== "/" && currentPath.startsWith(link.href));
+
+              if (link.label === "Calendar") {
+                return (
+                  <div
+                    key={link.label}
+                    className="relative"
+                    onMouseEnter={() => setShowCalendar(true)}
+                    onMouseLeave={() => setShowCalendar(false)}
+                  >
+                    <button
+                      id="nav-link-calendar"
+                      type="button"
+                      aria-expanded={showCalendar}
+                      aria-controls="calendar-popover"
+                      onClick={openCalendar}
+                      onFocus={() => setShowCalendar(true)}
+                      onBlur={() => setShowCalendar(false)}
+                      className="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm"
+                    >
+                      {link.label}
+                    </button>
+
+                    {showCalendar && (
+                      <div
+                        id="calendar-popover"
+                        className="absolute right-0 top-full mt-3 w-[320px] overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-2xl border border-slate-200 dark:border-slate-800 z-50 animate-scale-in"
+                        onMouseEnter={() => setShowCalendar(true)}
+                        onMouseLeave={() => setShowCalendar(false)}
+                      >
+                        <iframe
+                          src="https://www.hamropatro.com/widgets/calender-small.php"
+                          title="Nepali calendar"
+                          frameBorder="0"
+                          scrolling="no"
+                          marginWidth={0}
+                          marginHeight={0}
+                          className="block h-[360px] w-[320px] border-none"
+                          allowTransparency
+                        />
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
               return (
                 <a
                   key={link.label}
@@ -352,6 +405,26 @@ export const Header: React.FC<HeaderProps> = ({
                   const isActive =
                     currentPath === link.href ||
                     (link.href !== "/" && currentPath.startsWith(link.href));
+
+                  if (link.label === "Calendar") {
+                    return (
+                      <div key={link.label}>
+                        <a
+                          href={calendarUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-base font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-all"
+                        >
+                          <span className="flex items-center gap-2">
+                            <CalendarDays className="w-4 h-4" />
+                            {link.label}
+                          </span>
+                          <ExternalLink className="w-4 h-4 opacity-50" />
+                        </a>
+                      </div>
+                    );
+                  }
+
                   return (
                     <a
                       key={link.label}

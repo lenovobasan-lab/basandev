@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { schoolConfig } from "@/lib/school-config";
+import { assetPath } from "@/lib/asset-path";
 import {
   Quote,
   Languages,
@@ -36,8 +37,7 @@ export const principalData: PrincipalData = {
   title: "Principal & Executive Director",
   titleNepali: "प्रधानाध्यापक तथा कार्यकारी निर्देशक",
   qualifications: "Ph.D. in Educational Leadership, M.Ed. (Curriculum & Instruction)",
-  image:
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=85",
+  image: assetPath("/photos/staff/principal.jpg"),
   experience: "24+ Years in Academic Administration",
   email: "principal@mounteverest.edu.np",
   phone: "+977-61-532104 (Ext. 101)",

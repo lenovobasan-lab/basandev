@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { schoolConfig } from "@/lib/school-config";
+import { assetPath } from "@/lib/asset-path";
 import {
   Bell,
   Calendar,
@@ -28,12 +29,11 @@ export interface NoticeItem {
 export const schoolNotices: NoticeItem[] = [
   {
     id: "notice-1",
-    title: "Admission Open for Academic Year 2026/27 (Nursery to Grade XI)",
+    title: "Notice for Krishna Janmashtami hoiday",
     date: "February 20, 2026",
-    category: "Admissions",
+    category: "Holidays",
     urgent: true,
-    image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&auto=format&fit=crop&q=80",
+    image: assetPath("/photos/notices/janmastami.png"),
     description:
       "Online admission forms are now live. Entrance examination and parent-student orientation schedules are detailed in the circular. Merit scholarships available for meritorious students.",
     fileSize: "1.8 MB (PDF)",
@@ -44,8 +44,7 @@ export const schoolNotices: NoticeItem[] = [
     date: "February 15, 2026",
     category: "Examination",
     urgent: false,
-    image:
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    image: assetPath("/photos/notices/vacation-schedule.jpg"),
     description:
       "The final comprehensive exam schedule for academic session 2025/26 has been published. All students are advised to clear outstanding dues and collect examination admit cards by Feb 28.",
     fileSize: "850 KB (PDF)",
@@ -56,8 +55,7 @@ export const schoolNotices: NoticeItem[] = [
     date: "February 10, 2026",
     category: "Holidays",
     urgent: false,
-    image:
-      "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&auto=format&fit=crop&q=80",
+    image: assetPath("/photos/notices/vacation-schedule.jpg"),
     description:
       "The school administrative offices and physical classes will remain closed on the occasion of Maha Shivaratri. Regular academic routines will resume promptly on Sunday at 9:00 AM.",
     fileSize: "420 KB (PDF)",
@@ -68,8 +66,7 @@ export const schoolNotices: NoticeItem[] = [
     date: "February 02, 2026",
     category: "Events",
     urgent: false,
-    image:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
+    image: assetPath("/photos/notices/vacation-schedule.jpg"),
     description:
       "Mount Everest Academy is proud to host the 8th Western Region STEM Olympiad. Participating teams must register their project abstracts with the STEAM department coordinator.",
     fileSize: "2.4 MB (PDF)",
@@ -80,8 +77,7 @@ export const schoolNotices: NoticeItem[] = [
     date: "January 28, 2026",
     category: "Academic",
     urgent: true,
-    image:
-      "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&auto=format&fit=crop&q=80",
+    image: assetPath("/photos/notices/vacation-schedule.jpg"),
     description:
       "All respected guardians are cordially invited to attend the terminal progress review meeting to discuss academic progress, behavioral indicators, and remedial strategies.",
     fileSize: "650 KB (PDF)",
@@ -92,8 +88,7 @@ export const schoolNotices: NoticeItem[] = [
     date: "January 14, 2026",
     category: "Academic",
     urgent: false,
-    image:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=80",
+    image: assetPath("/photos/notices/vacation-schedule.jpg"),
     description:
       "Guidelines regarding the mandatory winter blazers, navy blue sweaters, and thermal socks for both primary and senior wing students as per student code regulation.",
     fileSize: "510 KB (PDF)",
