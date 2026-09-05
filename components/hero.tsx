@@ -128,7 +128,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           <div className="p-3.5 sm:p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 text-left">
             <Award className="w-5 h-5 text-amber-400 mb-1.5" />
             <div className="font-extrabold text-base sm:text-xl text-white">
-              28+ Years
+              55+ Years
             </div>
             <div className="text-[11px] sm:text-xs text-slate-300 font-medium">
               Academic Excellence
@@ -140,13 +140,13 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
               100% Success
             </div>
             <div className="text-[11px] sm:text-xs text-slate-300 font-medium">
-              SEE & NEB Results
+              Better Results
             </div>
           </div>
           <div className="p-3.5 sm:p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 text-left">
             <Users className="w-5 h-5 text-emerald-400 mb-1.5" />
             <div className="font-extrabold text-base sm:text-xl text-white">
-              65+ Faculty
+              ICT Based Learning
             </div>
             <div className="text-[11px] sm:text-xs text-slate-300 font-medium">
               Educators & Staff
@@ -155,7 +155,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           <div className="p-3.5 sm:p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 text-left">
             <Sparkles className="w-5 h-5 text-purple-400 mb-1.5" />
             <div className="font-extrabold text-base sm:text-xl text-white">
-              30+ Clubs
+              Music and Arts
             </div>
             <div className="text-[11px] sm:text-xs text-slate-300 font-medium">
               ECA & Sports

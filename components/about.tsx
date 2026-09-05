@@ -127,7 +127,7 @@ export const About: React.FC = () => {
                 Global Competence
               </h4>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Multilingual training (English, Nepali, Mandarin), global climate
+                Multilingual training (English, Nepali), global climate
                 action projects, and exchange dialogues.
               </p>
             </div>
@@ -142,15 +142,15 @@ export const About: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-                <MapPin className="w-4 h-4" /> Campus Location & Accessibility
+                <MapPin className="w-4 h-4" /> School Location & Accessibility
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
-                Situated in the Heart of Pokhara
+                Situated in the Heart of Ilam
               </h3>
               <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                Our purpose-built, secure, and earthquake-resilient campus spans over
-                25 ropanis of serene, landscaped grounds with panoramic views of the
-                Annapurna mountain range — providing a calm, green, and inspiring
+                Our purpose-built, secure, and earthquake-resilient school spans over
+                beautiful landscaped grounds with panoramic views of the
+                hills of Ilam, providing a calm, green, and inspiring
                 learning sanctuary.
               </p>
 
@@ -166,7 +166,7 @@ export const About: React.FC = () => {
                 <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
                   <Clock className="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <strong>Campus Hours:</strong>
+                    <strong>School Hours:</strong>
                     <br />
                     {schoolConfig.officeHours}
                   </div>
@@ -175,13 +175,13 @@ export const About: React.FC = () => {
 
               <div className="pt-2 flex flex-wrap gap-2">
                 <span className="text-xs px-3 py-1 bg-white dark:bg-slate-800 rounded-full font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-                  🚍 Dedicated School Bus Fleet (12 Routes)
+                  🚍 Dedicated School for learners
                 </span>
                 <span className="text-xs px-3 py-1 bg-white dark:bg-slate-800 rounded-full font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-                  🛡️ 24/7 CCTV & Security Guards
+                  🛡️ 24/7 CCTV & Security
                 </span>
                 <span className="text-xs px-3 py-1 bg-white dark:bg-slate-800 rounded-full font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-                  🏥 Full-Time Campus Infirmary
+                  🏥 Full-Time School Infirmary
                 </span>
               </div>
             </div>
@@ -192,7 +192,7 @@ export const About: React.FC = () => {
                 <div className="aspect-[4/3] w-full relative bg-slate-200 dark:bg-slate-800">
                   <iframe
                     title="School Campus Location Map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.688195822301!2d83.982181!3d28.216315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDEyJzU4LjciTiA4M8KwNTgnNTUuOSJF!5e0!3m2!1sen!2snp!4v1620000000000!5m2!1sen!2snp"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1319.2075824086262!2d88.07497071960837!3d26.911705598388544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e5cf87409751dd%3A0x7351c53829fe510c!2z4KSw4KS-4KS34KWN4KSf4KWN4KSw4KWA4KSvIOCkhuCkp-CkvuCksOCkreClgeCkpCDgpKzgpL_gpKfgpY3gpK_gpL7gpLLgpK8!5e1!3m2!1sen!2snp!4v1788602030034!5m2!1sen!2snp"
                     className="w-full h-full border-0"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
@@ -200,7 +200,7 @@ export const About: React.FC = () => {
                 </div>
                 <div className="p-3 bg-white dark:bg-slate-800 flex items-center justify-between text-xs text-slate-600 dark:text-slate-300">
                   <span className="font-semibold text-slate-800 dark:text-slate-200">
-                    Srijana Chowk Campus
+                    Rastriya Basic School, Ilam, Nepal
                   </span>
                   <a
                     href="https://maps.google.com"
